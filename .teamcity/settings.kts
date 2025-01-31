@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.maven
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -36,26 +35,6 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "First Level Subproject_1"
-
-    buildType(SubProject1_TestSomeCommands)
-})
-
-object SubProject1_TestSomeCommands : BuildType({
-    name = "Test Some Commands"
-    description = "Try create come files"
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        maven {
-            id = "Maven2"
-            goals = "clean test"
-            pomLocation = ".teamcity/pom.xml"
-            runnerArgs = "-Dmaven.test.failure.ignore=true"
-        }
-    }
 })
 
 
