@@ -52,6 +52,10 @@ object SubProject1_TestSomeCommands : BuildType({
             scriptContent = "touch self_created_file.txt"
         }
     }
+
+    requirements {
+        equals("teamcity.agent.name", "ip_172.17.0.1")
+    }
 })
 
 
