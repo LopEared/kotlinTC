@@ -35,6 +35,13 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "First Level Subproject_1"
+
+    buildType(SubProject1_TestSomeCommands)
+})
+
+object SubProject1_TestSomeCommands : BuildType({
+    name = "Test Some Commands"
+    description = "Try create come files"
 })
 
 
