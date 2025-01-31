@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -42,6 +43,15 @@ object SubProject1 : Project({
 object SubProject1_TestSomeCommands : BuildType({
     name = "TestSomeCommands"
     description = "TestSomeCommands"
+
+    steps {
+        script {
+            name = "Create Text File"
+            id = "Create_Text_File"
+            workingDir = "/"
+            scriptContent = "touch self_created_file.txt"
+        }
+    }
 })
 
 
