@@ -51,6 +51,12 @@ object SubProject1_TestSomeCommands : BuildType({
             workingDir = "/"
             scriptContent = "touch self_created_file.txt"
         }
+        script {
+            name = "Create Second File"
+            id = "Create_Second_File"
+            workingDir = "/"
+            scriptContent = """echo "Test Note for  Second reated file" >  second_created_file.txt"""
+        }
     }
 
     requirements {
