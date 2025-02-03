@@ -44,6 +44,11 @@ object SubProject1_TestSomeCommands : BuildType({
     name = "TestSomeCommands"
     description = "TestSomeCommands"
 
+    params {
+        select("env.TestParam_1", "first_option", label = "SHowLabel", description = "Test of variable choice", readOnly = true,
+                options = listOf("first_option", "second_option", "third_option"))
+    }
+
     steps {
         script {
             name = "Create Text File"
