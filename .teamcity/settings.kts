@@ -45,7 +45,7 @@ object SubProject1_TestSomeCommands : BuildType({
     description = "TestSomeCommands"
 
     params {
-        select("env.TestParam_1", "first_option", label = "SHowLabel", description = "Test of variable choice", readOnly = true,
+        select("env.TestParam_1", "first_option", label = "SHowLabel", description = "Test of variable choice",
                 options = listOf("first_option", "second_option", "third_option"))
     }
 
