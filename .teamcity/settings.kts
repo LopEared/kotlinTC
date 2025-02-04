@@ -36,6 +36,13 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "TestSubProj_1"
+
+    buildType(SubProject1_TestCreateFileWithParametres)
+})
+
+object SubProject1_TestCreateFileWithParametres : BuildType({
+    name = "Test Create File With parametres"
+    description = "Test creting Parameters and files and CLI"
 })
 
 
