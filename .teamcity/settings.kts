@@ -43,6 +43,10 @@ object SubProject1 : Project({
 object SubProject1_TestCreateFileWithParametres : BuildType({
     name = "Test Create File With parametres"
     description = "Test creting Parameters and files and CLI"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 
