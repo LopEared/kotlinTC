@@ -65,7 +65,11 @@ object SubProject1_TestSomeCommands : BuildType({
             name = "Create Second File"
             id = "Create_Second_File"
             workingDir = "/"
-            scriptContent = """echo "Test Note for Second reated file %env.TestParam_1%" >  second_created_file_%env.TestParam_1%.txt"""
+            scriptContent = """
+                echo ${TQ}Test Note for Second reated file %env.TestParam_1% and try get new feature:
+                     - branch name IS: %teamcity.build.branch%
+                     Last string for tests$TQ >  second_created_file_%env.TestParam_1%.txt
+            """.trimIndent()
         }
     }
 
