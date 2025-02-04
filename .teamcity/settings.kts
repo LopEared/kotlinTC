@@ -29,6 +29,7 @@ project {
 
     subProject(SubProject1)
     subProject(SubProject2)
+    subProject(SubProject3)
 }
 
 
@@ -41,4 +42,10 @@ object SubProject1 : Project({
 object SubProject2 : Project({
     name = "SubProject_2"
     description = "TestSubProj_2"
+})
+
+
+object SubProject3 : Project({
+    name = "SubProject_3"
+    description = "TestSubProj_3"
 })
