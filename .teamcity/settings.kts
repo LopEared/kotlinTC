@@ -68,6 +68,10 @@ object SubProject1_TestBuildConfigsSteps1 : BuildType({
             """.trimIndent()
         }
     }
+
+    requirements {
+        equals("teamcity.agent.name", "ip_172.17.0.1")
+    }
 })
 
 
