@@ -43,7 +43,7 @@ object SubProject1 : Project({
 
 object SubProject1_TestBuildConfigsSteps1 : BuildType({
     name = "Test_BuildConfigsSteps_1"
-    description = "Test SOme COmmands in TeamcCity"
+    description = "Test Some Commands in TeamcCity"
 
     params {
         select("env.barnchChoice", "first_option", label = "MAKE CHOICE!", description = "This filed intended for make choice of repo branch",
