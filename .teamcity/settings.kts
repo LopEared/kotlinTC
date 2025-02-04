@@ -44,6 +44,11 @@ object SubProject1_TestCreateFileWithParametres : BuildType({
     name = "Test Create File With parametres"
     description = "Test creting Parameters and files and CLI"
 
+    params {
+        select("env.branchChoice", "", label = "Choose Branch!", description = "Please! Choose Branch Name",
+                options = listOf("first_option", "second_option", "third_option", "fourth_option"))
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
