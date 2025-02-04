@@ -36,6 +36,13 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "TestSubProj_1"
+
+    buildType(SubProject1_TestBuildConfigsSteps1)
+})
+
+object SubProject1_TestBuildConfigsSteps1 : BuildType({
+    name = "Test_BuildConfigsSteps_1"
+    description = "Test SOme COmmands in TeamcCity"
 })
 
 
