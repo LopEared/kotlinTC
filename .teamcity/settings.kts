@@ -67,6 +67,10 @@ object SubProject1_TestCreateFileWithParametres : BuildType({
             """.trimIndent()
         }
     }
+
+    requirements {
+        equals("teamcity.agent.name", "ip_172.17.0.1")
+    }
 })
 
 
