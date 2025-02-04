@@ -59,6 +59,10 @@ object SubProject1_TestBuildConfigsSteps1 : BuildType({
         script {
             name = "CreateFiles"
             id = "CreateFiles"
+
+            conditions {
+                equals("teamcity.build.branch", "%branchName%")
+            }
             workingDir = "/"
             scriptContent = """
                 echo $TQ
