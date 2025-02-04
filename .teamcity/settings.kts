@@ -34,20 +34,4 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "TestSubProj_1"
-
-    subProject(SubProject1_SubProject2)
-})
-
-
-object SubProject1_SubProject2 : Project({
-    name = "SubProject_2"
-    description = "TestSubProj_2"
-
-    subProject(SubProject1_SubProject2_SubProject3)
-})
-
-
-object SubProject1_SubProject2_SubProject3 : Project({
-    name = "SubProject_3"
-    description = "TestSubProj_3"
 })
