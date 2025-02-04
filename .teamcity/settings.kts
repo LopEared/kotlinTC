@@ -26,4 +26,12 @@ version = "2024.12"
 
 project {
     description = "TestRootProject2"
+
+    subProject(SubProject1)
 }
+
+
+object SubProject1 : Project({
+    name = "SubProject_1"
+    description = "TestSubProj_1"
+})
