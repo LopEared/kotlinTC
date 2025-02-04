@@ -43,6 +43,10 @@ object SubProject1 : Project({
 object SubProject1_TestBuildConfig1 : BuildType({
     name = "TestBuildConfig_1"
     description = "TestSome_Commands"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 
