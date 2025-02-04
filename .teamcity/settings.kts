@@ -28,10 +28,17 @@ project {
     description = "TestRootProject2"
 
     subProject(SubProject1)
+    subProject(SubProject2)
 }
 
 
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "TestSubProj_1"
+})
+
+
+object SubProject2 : Project({
+    name = "SubProject_2"
+    description = "TestSubProj_2"
 })
