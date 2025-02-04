@@ -44,6 +44,11 @@ object SubProject1_TestBuildConfigsSteps1 : BuildType({
     name = "Test_BuildConfigsSteps_1"
     description = "Test SOme COmmands in TeamcCity"
 
+    params {
+        select("env.barnchChoice", "first_option", label = "MAKE CHOICE!", description = "This filed intended for make choice of repo branch",
+                options = listOf("first_option", "second_option", "third_option", "fourth_option"))
+    }
+
     vcs {
         root(DslContext.settingsRoot)
     }
