@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -37,40 +36,6 @@ project {
 object SubProject1 : Project({
     name = "SubProject_1"
     description = "TestSubProj_1"
-
-    buildType(SubProject1_TestCreateFileWithParametres)
-})
-
-object SubProject1_TestCreateFileWithParametres : BuildType({
-    name = "Test Create File With parametres"
-    description = "Test creting Parameters and files and CLI"
-
-    params {
-        select("env.branchChoice", "", label = "Choose Branch!", description = "Please! Choose Branch Name",
-                options = listOf("first_option", "second_option", "third_option", "fourth_option"))
-    }
-
-    vcs {
-        root(DslContext.settingsRoot)
-    }
-
-    steps {
-        script {
-            name = "Test Commands"
-            id = "Test_Commands"
-            workingDir = "/"
-            scriptContent = """
-                echo ${TQ}Test first branch choose option is: %env.branchChoice%
-                     Then test current branch name is: %teamcity.build.branch%
-                     And Current  build number is: %build.number%
-                     $TQ > _test_file.txt
-            """.trimIndent()
-        }
-    }
-
-    requirements {
-        equals("teamcity.agent.name", "ip_172.17.0.1")
-    }
 })
 
 
