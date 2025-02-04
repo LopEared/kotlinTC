@@ -69,6 +69,7 @@ object SubProject1_TestBuildConfigsSteps1 : BuildType({
                 First line is test option choice is: %env.barnchChoice%
                 Current Build is: %build.number%
                 Current Build Branch is: %teamcity.build.branch%
+                Last strin is: %branchName%%
                     $TQ > %build.number%_file_name.txt
             """.trimIndent()
         }
