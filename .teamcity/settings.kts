@@ -48,6 +48,7 @@ object SubProject1_TestBuildConfigsSteps1 : BuildType({
     params {
         select("env.barnchChoice", "first_option", label = "MAKE CHOICE!", description = "This filed intended for make choice of repo branch",
                 options = listOf("first_option", "second_option", "third_option", "fourth_option"))
+        text("branchName", "", label = "Input Branch Name", description = "Name Start Branch", display = ParameterDisplay.PROMPT, allowEmpty = false)
     }
 
     vcs {
